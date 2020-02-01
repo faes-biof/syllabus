@@ -1,6 +1,5 @@
 ::: {custom-style="center"}
-![A close up of a sign Description generated with very high
-confidence](media/faes300.png){height="2cm"}
+![](media/faes300.png){height="2cm"}
 
 Course Identification Number and Title
 
@@ -15,138 +14,141 @@ Syllabus
 
 # Contact Information:
 
-- E-mail: \_\_\_\_@gmail.com
+## E-mail: \_\_\_\_@gmail.com
 
-- Phone: \_\_\_\_-\_\_\_\_-\_\_\_\_
+## Phone: \_\_\_\_-\_\_\_\_-\_\_\_\_
 
-- Virtual Office Hours: \_\_\_\_days, \_\_:\_\_-\_\_:\_\_
+## Virtual Office Hours: \_\_\_\_days, \_\_:\_\_-\_\_:\_\_
 
-- Preferred Method of Communication: https://gitter.im/\_\_\_\_/community
+## Preferred Method of Communication: https://gitter.im/\_\_\_\_/community
 
-- Prerequisites: None
+# Course Information:
 
-- Course Description:
+## Prerequisites: None
 
-    - Describe your course here
+## Course Description:
 
-- Course Website:
+### Describe your course here
 
-    - Explanation for how, and how frequently, to access the course site
+## Course Website:
 
-- Learning Materials:
+### Explanation for how, and how frequently, to access the course site
 
-    - Required and Recommended Texts:
+## Learning Materials:
 
-    - Required Journal Articles:
+### Required and Recommended Texts:
 
-        - Explanation for how to access these articles
+### Required Journal Articles:
 
-- Course Goals
+#### Explanation for how to access these articles
 
-    - When you complete the course successfully, you will be able to:
+## Course Goals
 
-        - \[Add the goals here\]
+### When you complete the course successfully, you will be able to:
 
-- Structure of the Course
-    - Organization of the course
+#### \[Add the goals here\]
 
-- The Learning Process
+## Structure of the Course
 
-    - Your teaching and learning philosophy
+### Organization of the course
 
-    - Methods for students to achieve success
+### The Learning Process
 
-    - Time commitment
+#### Your teaching and learning philosophy
+
+#### Methods for students to achieve success
+
+#### Time commitment
 
 # Important Dates:
 
-- Drop deadline
+## Drop deadline
 
-- Audit and withdrawal deadline
+## Audit and withdrawal deadline
 
-- Holidays
+## Holidays
 
 # Communication:
 
-- Reply to email:
+## Reply to email:
 
-- Reply to voicemail:
+## Reply to voicemail:
 
-- Preferred time to call:
+## Preferred time to call:
 
-- Other forms of communication, if applicable:
+## Other forms of communication, if applicable:
 
 # Etiquette:
 
-- Email:
+## Email:
 
-- Group etiquette:
+## Group etiquette:
 
-- Discussion board etiquette:
+## Discussion board etiquette:
 
-####### **\[PLEASE DO NOT CHANGE OR DELETE THE TEXT BELOW THROUGH THE \*\*\*\]**
+**\[PLEASE DO NOT CHANGE OR DELETE THE TEXT BELOW THROUGH THE \*\*\*\]**
 
 # Policies:
 
-- Academic Policies:
+## Academic Policies:
 
-    - This course adheres to all FAES policies described in the academic catalog and student handbook, including the Academic Integrity policy listed on page 11 of the academic catalog and student handbook. Be certain that you are knowledgeable about all of the policies listed in this syllabus, in the academic catalog and student handbook, and on the FAES website. As a student in this program, you are bound by those policies.
+### This course adheres to all FAES policies described in the academic catalog and student handbook, including the Academic Integrity policy listed on page 11 of the academic catalog and student handbook. Be certain that you are knowledgeable about all of the policies listed in this syllabus, in the academic catalog and student handbook, and on the FAES website. As a student in this program, you are bound by those policies.
 
-- Copyright:
+## Copyright:
 
-    - All course materials are the property of FAES and are to be used for the student’s individual academic purpose only. Any dissemination, copying, reproducing, modification, displaying, or transmitting of any course material for any other purpose is prohibited, will be considered misconduct, and may be cause for disciplinary action. In addition, encouraging academic dishonesty by distributing information about course materials or assignments which would give an unfair advantage to others may violate the FAES Academic Integrity policy. Course materials may not be exchanged or distributed for commercial purposes, for compensation, or for any purpose other than use by students enrolled in the course. Distributions of course materials may be subject to disciplinary action.
+### All course materials are the property of FAES and are to be used for the student’s individual academic purpose only. Any dissemination, copying, reproducing, modification, displaying, or transmitting of any course material for any other purpose is prohibited, will be considered misconduct, and may be cause for disciplinary action. In addition, encouraging academic dishonesty by distributing information about course materials or assignments which would give an unfair advantage to others may violate the FAES Academic Integrity policy. Course materials may not be exchanged or distributed for commercial purposes, for compensation, or for any purpose other than use by students enrolled in the course. Distributions of course materials may be subject to disciplinary action.
 
-- Guidelines for Disability Accommodations:
+## Guidelines for Disability Accommodations:
 
-    - FAES is committed to providing reasonable and appropriate accommodations to students with disabilities. Students with documented disabilities should contact Dr. Mindy Maris, Assistant Dean of Academic Programs.
+### FAES is committed to providing reasonable and appropriate accommodations to students with disabilities. Students with documented disabilities should contact Dr. Mindy Maris, Assistant Dean of Academic Programs.
 
-- Dropping the Course:
+## Dropping the Course:
 
-    - Students are responsible for understanding FAES policies, procedures, and deadlines regarding dropping or withdrawing from the course or switching to audit status.
+### Students are responsible for understanding FAES policies, procedures, and deadlines regarding dropping or withdrawing from the course or switching to audit status.
 
-- Harassment:
+## Harassment:
 
-    - FAES adheres to the NIH’s harassment policies, which can be found at the following link: <https://hr.nih.gov/working-nih/civil/statement-workplace-harassment>
+### FAES adheres to the NIH’s harassment policies, which can be found at the following link: <https://hr.nih.gov/working-nih/civil/statement-workplace-harassment>
 
-    - Faculty and students in FAES courses are responsible for being familiar with the NIH’s harassment policies and adhering to them.
+### Faculty and students in FAES courses are responsible for being familiar with the NIH’s harassment policies and adhering to them.
 
-###### **\[\*\*\*\]**
+**\[\*\*\*\]**
 
-###### \[INCLUDE LANGUAGE ABOUT YOUR OWN POLICIES REGARDING THE FOLLOWING:\]
+\[INCLUDE LANGUAGE ABOUT YOUR OWN POLICIES REGARDING THE FOLLOWING:\]
 
-- Attendance
+## Attendance
 
-- Participation
+## Participation
 
-- Assignment Submission
+## Assignment Submission
 
-- Due Dates
+## Due Dates
 
-- Late Submission Policies
+## Late Submission Policies
 
-- Assignment Formats
+## Assignment Formats
 
-- Citation Format
+## Citation Format
 
-- Discussion Board Policies, if applicable:
+## Discussion Board Policies, if applicable:
 
-    - Guidelines for posts
+### Guidelines for posts
 
-    - Due dates
+### Due dates
 
-    - Late submission policies
+### Late submission policies
 
 # Assignments:
 
-- Step-by-Step Guidelines for Submitting Assignments:
+## Step-by-Step Guidelines for Submitting Assignments:
 
-- Expectations for instructor’s feedback on assignments:
+## Expectations for instructor’s feedback on assignments:
 
-- Major Assignments:
+## Major Assignments:
 
-    - Detailed assignment descriptions
+### Detailed assignment descriptions
 
-    - Value of each assignment / percentage of total course grade
+### Value of each assignment / percentage of total course grade
 
 # Grading Scale:
 
