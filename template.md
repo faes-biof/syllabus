@@ -1,14 +1,15 @@
-###### ![A close up of a sign Description generated with very high
+::: {custom-style="center"}
+![A close up of a sign Description generated with very high
 confidence](media/faes300.png){height="2cm"}
 
-###### Course Identification Number and Title
+Course Identification Number and Title
 
-###### Number of Credits
+Number of Credits
 
-###### Term and Year
+Term and Year
 
-###### Syllabus
-
+Syllabus
+:::
 
 # Instructor: \_\_\_\_ \_\_\_\_
 
@@ -47,7 +48,6 @@ confidence](media/faes300.png){height="2cm"}
         - \[Add the goals here\]
 
 - Structure of the Course
-
     - Organization of the course
 
 - The Learning Process
