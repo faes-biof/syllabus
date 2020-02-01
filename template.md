@@ -16,7 +16,7 @@ Syllabus
 
 ## E-mail: \_\_\_\_@gmail.com
 
-## Phone: \_\_\_\_-\_\_\_\_-\_\_\_\_
+## Phone: \_\_\_-\_\_\_-\_\_\_\_
 
 ## Virtual Office Hours: \_\_\_\_days, \_\_:\_\_-\_\_:\_\_
 
@@ -27,8 +27,6 @@ Syllabus
 ## Prerequisites: None
 
 ## Course Description:
-
-### Describe your course here
 
 ## Course Website:
 
@@ -60,8 +58,6 @@ Syllabus
 
 #### Time commitment
 
-\newline
-
 # Important Dates:
 
 ## Drop deadline
@@ -88,9 +84,9 @@ Syllabus
 
 ## Discussion board etiquette:
 
-**\[PLEASE DO NOT CHANGE OR DELETE THE TEXT BELOW THROUGH THE \*\*\*\]**
-
 # Policies:
+
+**\[PLEASE DO NOT CHANGE OR DELETE THE TEXT BELOW THROUGH THE \*\*\*\]**
 
 ## Academic Policies:
 
@@ -140,39 +136,33 @@ Syllabus
 
 ### Late submission policies
 
-# Assignments:
+# Step-by-Step Guidelines for Submitting Assignments:
 
-## Step-by-Step Guidelines for Submitting Assignments:
+# Expectations for instructor’s feedback on assignments:
 
-## Expectations for instructor’s feedback on assignments:
+# Major Assignments:
 
-## Major Assignments:
+## Detailed assignment descriptions
 
-### Detailed assignment descriptions
-
-### Value of each assignment / percentage of total course grade
+## Value of each assignment / percentage of total course grade
 
 # Grading Scale:
 
 # Weekly Schedule:
 
-  Week   Readings   Learning Activities and Assignments
-  ------ ---------- -------------------------------------
-  1                 
-  2                 
-  3                 
-  4                 
-  5                 
-  6                 
-  7                 
-  8                 
-  9                 
-  10                
-  11                
-  12                
-  13                
-  14                
-
-  : Course Schedule
-
-
+Week   Readings   Learning Activities and Assignments
+------|----------|-------------------------------------
+1     |          |
+2     |          |
+3     |          |
+4     |          |
+5     |          |
+6     |          |
+7     |          |
+8     |          |
+9     |          |
+10    |          |
+11    |          |
+12    |          |
+13    |          |
+14    |          |
