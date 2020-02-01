@@ -60,6 +60,8 @@ Syllabus
 
 #### Time commitment
 
+\newline
+
 # Important Dates:
 
 ## Drop deadline
