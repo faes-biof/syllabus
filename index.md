@@ -15,12 +15,12 @@ Steps:
 4. Go to your course repo and fill in the new markdown file using your favorite text editor, e.g.
 - `cd ~/biof309/spring2020/`
 - `vim 2020-spring-biof309-syllabus.md`
-5. Use pandoc to convert
+5. Use pandoc to convert your syllabus markdown file to docx format
 - `pandoc 2020-spring-biof309-syllabus.md -o 2020-spring-biof309-syllabus.docx --reference-doc=reference.docx`
-6. Symlink the markdown file to README.md, e.g.
-- `ln 2020-spring-biof309.md README.md`
-7. Push the markdown files to github, e.g.
-- `git add 2020-spring-biof309.md README.md`
+6. Symlink your syllabus markdown file to README.md, e.g.
+- `ln 2020-spring-biof309-syllabus.md README.md`
+7. Push the new files to github, e.g.
+- `git add 2020-spring-biof309-syllabus.md 2020-spring-biof309-syllabus.docx README.md`
 - `git commit -m "update syllabus using FAES template"`
 - `git push`
 8. Send the docx file to FAES and any students that ask for a Word doc. If any changes need to be made, edit the markdown file and then rerun pandoc to create the docx file.
