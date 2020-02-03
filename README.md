@@ -1,10 +1,11 @@
 Requirements:
 - [git](https://git-scm.com/) (May already be installed, if running `git --help` gives an error, [install git](https://www.atlassian.com/git/tutorials/install-git))
 - [pandoc](https://pandoc.org/) - (Probably not already installed, [install pandoc](https://pandoc.org/installing.html))
+
 Steps:
 1. Clone this repo, e.g. `git clone https://github.com/faes-biof/syllabus ~/faes-biof/syllabus; cd ~/faes-biof/syllabus`
 2. Clone your course repo, e.g. `git clone https://github.com/biof309/spring2020 ~/biof309/spring2020`
-3. Rename [the syllabus template markdown file (template.md)](/template.md) to <year>-<semester>-<code>.md, e.g. `mv template.md 2020-spring-biof309.md`
+3. Rename [the syllabus template markdown file (template.md)](/template.md) to `<year>-<semester>-<code>.md`, e.g. `mv template.md 2020-spring-biof309.md`
 4. Fill in the new markdown file using your favorite text editor, e.g. `vim 2020-spring-biof309.md`
 5. Run `pandoc 2020-spring-biof309.md -o template.docx --reference-doc=reference.docx`
 6. Copy both new files to your course repo, e.g. `cp 2020-spring-biof309.md 2020-spring-biof309.docx ~/biof309/spring2020`
