@@ -17,8 +17,8 @@ Initial setup:
 - `bash ~/faes-biof/syllabus/1_clone_course_repo.sh`
 4. Run [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
 - `bash ~/faes-biof/syllabus/2_copy_syllabus_template.sh`
-5. Edit the new markdown file in your course repo using your favorite text editor, e.g.
-- `vim 2020-spring-biof309-syllabus.md`
+5. `cd` into your course repo and edit the [syllabus template markdown file](template.md) using your favorite text editor, e.g.
+- `vim template.md`
 6. Run [3_make_docx.sh](3_make_docx.sh):
 - `bash ~/faes-biof/syllabus/3_make_docx.sh`
 7. Run [4_push_syllabus.sh](4_push_syllabus.sh):
@@ -41,7 +41,6 @@ YEAR=<year>
 SEMESTER=<semester>
 COURSE_CODE=<course_code>
 git clone https://github.com/$COURSE_CODE/$SEMESTER$YEAR ~/$COURSE_CODE/$SEMESTER$YEAR
-cd ~/$COURSE_CODE/$SEMESTER$YEAR
 ```
 
 [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
@@ -50,8 +49,7 @@ cd ~/$COURSE_CODE/$SEMESTER$YEAR
 YEAR=<year>
 SEMESTER=<semester>
 COURSE_CODE=<course_code>
-cd ~/$COURSE_CODE/$SEMESTER$YEAR
-cp ~/faes-biof/syllabus/template.md ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx .
+cp ~/faes-biof/syllabus/template.md ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx ~/$COURSE_CODE/$SEMESTER$YEAR
 ```
 
 [3_make_docx.sh](3_make_docx.sh):

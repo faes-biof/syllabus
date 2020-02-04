@@ -2,6 +2,7 @@ YEAR=<year>
 SEMESTER=<semester>
 COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
+cd ~/$COURSE_CODE/$SEMESTER$YEAR
 sed '
     s/^<div align="center">/::: {custom-style="center"}/;
     s/^<\/div>/:::/;
