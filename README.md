@@ -17,13 +17,13 @@ Initial setup:
 - `bash ~/faes-biof/syllabus/1_clone_course_repo.sh`
 4. Run [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
 - `bash ~/faes-biof/syllabus/2_copy_syllabus_template.sh`
-5. Edit the new markdown file in to your course repo using your favorite text editor, e.g.
+5. Edit the new markdown file in your course repo using your favorite text editor, e.g.
 - `vim 2020-spring-biof309-syllabus.md`
 6. Run [3_make_docx.sh](3_make_docx.sh):
 - `bash ~/faes-biof/syllabus/3_make_docx.sh`
 7. Run [4_push_syllabus.sh](4_push_syllabus.sh):
 - `bash ~/faes-biof/syllabus/4_push_syllabus.sh`
-8. Repeat steps 5-6 as needed.
+8. Repeat steps 5-7 as needed.
 OPTIONAL: Symlink your syllabus markdown file to README.md, e.g.
 - `ln -s 2020-spring-biof309-syllabus.md README.md`
 - `git add README.md`
