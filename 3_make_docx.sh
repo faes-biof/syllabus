@@ -11,4 +11,4 @@ sed '
     s/^- /#### /;
     s/^  - /##### /;
     s/^    - /###### /;
-    ' template.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
+    ' $SYLLABUS_NAME.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
