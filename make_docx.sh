@@ -1,3 +1,7 @@
+YEAR=<year>
+SEMESTER=<semester>
+COURSE_CODE=<course_code>
+SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE
 sed '
     s/^<div align="center">/::: {custom-style="center"}/;
     s/^<\/div>/:::/;
@@ -6,4 +10,4 @@ sed '
     s/^- /#### /;
     s/^  - /##### /;
     s/^    - /###### /;
-    ' template.md | pandoc -o test.docx --reference-doc=reference.docx
+    ' template.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="media/faes300.png" width="200">
+<img src="faes300.png" width="200">
 
 Course Identification Number and Title
 
