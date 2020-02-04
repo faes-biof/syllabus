@@ -4,8 +4,11 @@ Requirements:
 - a course repo on [GitHub](https://github.com/) - For more on how to create a GitHub repo, visit [this webpage](https://help.github.com/en/github/getting-started-with-github/create-a-repo)
 
 Initial setup:
-1. Clone this repo, e.g.
+1. Clone and cd into this repo:
 - `git clone https://github.com/faes-biof/syllabus ~/faes-biof/syllabus`
+- `cd ~/faes-biof/syllabus`
+2. Edit the words YEAR, SEMESTER, and COURSE_CODE in [0_edit_scripts.sh](0_edit_scripts.sh), e.g.
+- `sed -i.bak 's/YEAR/2020/;s/SEMESTER/spring/;s/COURSE_CODE/biof309/' 0_edit_scripts.sh`
 2. Run [0_edit_scripts.sh](0_edit_scripts.sh) to modify the YEAR, SEMESTER, and COURSE_CODE variables in
 - [1_clone_course_repo.sh](1_clone_course_repo.sh),
 - [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh),
