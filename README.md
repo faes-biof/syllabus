@@ -9,34 +9,31 @@ Initial setup:
 - `cd ~/faes-biof/syllabus`
 2. Edit the 3 uppercase words (YEAR, SEMESTER, and COURSE_CODE) in [0_edit_scripts.sh](0_edit_scripts.sh), e.g.
 - `sed -i.bak 's/YEAR/2020/;s/SEMESTER/spring/;s/COURSE_CODE/biof309/' 0_edit_scripts.sh`
-3. Run [0_edit_scripts.sh](0_edit_scripts.sh) to modify the YEAR, SEMESTER, and COURSE_CODE variables in
-- [1_clone_course_repo.sh](1_clone_course_repo.sh),
-- [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh),
-- [3_make_docx.sh](3_make_docx.sh),
-- [4_push_syllabus.sh](4_push_syllabus.sh),
-- [5_symlink_readme.sh](5_symlink_readme.sh), and
-- [6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh):
-- `bash 0_edit_scripts`
-4. Clone your course repo if you haven't already:
-- `bash ~/faes-biof/syllabus/1_clone_course_repo.sh`
-5. Run [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
-- `bash ~/faes-biof/syllabus/2_copy_syllabus_template.sh`
-6. `cd` into your course repo and edit the [syllabus template markdown file](template.md) using your favorite text editor, e.g.
-- `vim template.md`
-7. Run [3_make_docx.sh](3_make_docx.sh):
-- `bash ~/faes-biof/syllabus/3_make_docx.sh`
-8. Run [4_push_syllabus.sh](4_push_syllabus.sh):
-- `bash ~/faes-biof/syllabus/4_push_syllabus.sh`
-9. Repeat steps 6-8 as needed.
-OPTIONAL: Run [5_symlink_readme.sh](5_symlink_readme.sh) to symlink your syllabus markdown file to README.md, e.g.
-- `bash 5_symlink_readme.sh`
-OPTIONAL: Run [6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh) to push the FAES logo and reference docx to your course repo, e.g.
-- `bash 6_push_logo_and_refdoc.sh`
+3. Run the first 2 scripts with a for loop:
+- `for file in {0..1}*.sh; do bash $file; done`
+4. Edit edit the syllabus template markdown file in your course repo using your favorite text editor, e.g.
+- `vim ~/biof309/spring2020/2020-spring-biof309.md`
+5. Run the next 3 scripts with a for loop:
+- `for file in {2..4}*.sh; do bash $file; done`
+6. Repeats steps 4-5 whenever you want to update the syllabus
 
-After completing step 2, you can run the remaining steps with a for loop:
-```sh
-for file in *.sh; do bash $file; done;
-```
+### What do the scripts do?
+- [0_edit_scripts.sh](0_edit_scripts.sh) modifies the YEAR, SEMESTER, and COURSE_CODE variables in
+    - [1_clone_course_repo.sh](1_clone_course_repo.sh),
+    - [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh),
+    - [3_make_docx.sh](3_make_docx.sh),
+    - [4_push_syllabus.sh](4_push_syllabus.sh),
+    - [5_symlink_readme.sh](5_symlink_readme.sh), and
+    - [6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh)
+- [1_clone_course_repo.sh](1_clone_course_repo.sh) clones your course repo (skip this step if it is already cloned)
+- [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh) copies the following files to your course repo:
+    - syllabus template,
+    - FAES logo, and
+    - reference.docx
+- [3_make_docx.sh](3_make_docx.sh) creates a docx version of your syllabus markdown file using [pandoc](https://pandoc.org/)
+- [4_push_syllabus.sh](4_push_syllabus.sh) adds, commits, and pushes the markdown and docx versions of your syllabus to your course repo
+- [5_symlink_readme.sh](5_symlink_readme.sh) **overwrites your current README.md** by symlinking your syllabus markdown file to README.md
+- [6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh) pushes the FAES logo and reference docx to your course repo, e.g.
 
 [1_clone_course_repo.sh](1_clone_course_repo.sh):
 
