@@ -11,7 +11,8 @@ Initial setup:
 - [2_copy_syllabus_template.sh](copy_syllabus_template.sh),
 - [3_make_docx.sh](make_docx.sh), and
 - [4_push_syllabus.sh](push_syllabus.sh), e.g.
-- `find ~/faes-biof/syllabus -type f -name '*.sh' | xargs sed -I{} 's/<year>/2020/;s/<semester>/spring/;s/<course_code>/biof309/' {} > {}`
+- MacOS/BSD Linux: `find ~/faes-biof/syllabus -type f -name '*.sh' -print0 | xargs -0 sed -i '' 's/<year>/2020/;s/<semester>/spring/;s/<course_code>/biof309/'`
+- Ubuntu/Debian Linux: `find ~/faes-biof/syllabus -type f -name '*.sh' -print0 | xargs -0 sed -i 's/<year>/2020/;s/<semester>/spring/;s/<course_code>/biof309/'`
 3. Clone your course repo if you haven't already:
 - `bash ~/faes-biof/syllabus/1_clone_course_repo.sh`
 4. Run [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
@@ -25,6 +26,9 @@ Initial setup:
 8. Repeat steps 5-6 as needed.
 OPTIONAL: Symlink your syllabus markdown file to README.md, e.g.
 - `ln -s 2020-spring-biof309-syllabus.md README.md`
+- `git add README.md`
+- `git commit -m "Replace current readme with syllabus"`
+- `git push`
 OPTIONAL: Add the FAES logo, syllabus template, and reference docx to your course repo, e.g.
 - `git add faes300.png template.md reference.docx`
 - `git commit -m "Add FAES logo, syllabus template, and reference docx"`
