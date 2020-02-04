@@ -6,13 +6,14 @@ Requirements:
 Initial setup:
 1. Clone this repo, e.g.
 - `git clone https://github.com/faes-biof/syllabus ~/faes-biof/syllabus`
-2. Modify the YEAR, SEMESTER, and COURSE_CODE variables in
+2. Run [0_edit_scripts.sh](0_edit_scripts.sh) to modify the YEAR, SEMESTER, and COURSE_CODE variables in
 - [1_clone_course_repo.sh](1_clone_course_repo.sh),
 - [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh),
-- [3_make_docx.sh](3_make_docx.sh), and
-- [4_push_syllabus.sh](4_push_syllabus.sh), e.g.
-- MacOS/BSD Linux: `find ~/faes-biof/syllabus -type f -name '*.sh' -print0 | xargs -0 sed -i '' 's/<year>/2020/;s/<semester>/spring/;s/<course_code>/biof309/'`
-- Ubuntu/Debian Linux: `find ~/faes-biof/syllabus -type f -name '*.sh' -print0 | xargs -0 sed -i 's/<year>/2020/;s/<semester>/spring/;s/<course_code>/biof309/'`
+- [3_make_docx.sh](3_make_docx.sh),
+- [4_push_syllabus.sh](4_push_syllabus.sh),
+- [5_symlink_readme.sh](5_symlink_readme.sh), and
+- [6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh):
+- `bash 0_edit_scripts`
 3. Clone your course repo if you haven't already:
 - `bash ~/faes-biof/syllabus/1_clone_course_repo.sh`
 4. Run [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
