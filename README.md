@@ -7,10 +7,10 @@ Initial setup:
 1. Clone this repo, e.g.
 - `git clone https://github.com/faes-biof/syllabus ~/faes-biof/syllabus`
 2. Modify the YEAR, SEMESTER, and COURSE_CODE variables in
-- [1_clone_course_repo.sh](clone_course_repo.sh),
-- [2_copy_syllabus_template.sh](copy_syllabus_template.sh),
-- [3_make_docx.sh](make_docx.sh), and
-- [4_push_syllabus.sh](push_syllabus.sh), e.g.
+- [1_clone_course_repo.sh](1_clone_course_repo.sh),
+- [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh),
+- [3_make_docx.sh](3_make_docx.sh), and
+- [4_push_syllabus.sh](4_push_syllabus.sh), e.g.
 - MacOS/BSD Linux: `find ~/faes-biof/syllabus -type f -name '*.sh' -print0 | xargs -0 sed -i '' 's/<year>/2020/;s/<semester>/spring/;s/<course_code>/biof309/'`
 - Ubuntu/Debian Linux: `find ~/faes-biof/syllabus -type f -name '*.sh' -print0 | xargs -0 sed -i 's/<year>/2020/;s/<semester>/spring/;s/<course_code>/biof309/'`
 3. Clone your course repo if you haven't already:
@@ -34,7 +34,7 @@ OPTIONAL: Add the FAES logo, syllabus template, and reference docx to your cours
 - `git commit -m "Add FAES logo, syllabus template, and reference docx"`
 - `git push`
 
-[1_clone_course_repo.sh](clone_course_repo.sh):
+[1_clone_course_repo.sh](1_clone_course_repo.sh):
 
 ```
 YEAR=<year>
@@ -44,7 +44,7 @@ git clone https://github.com/$COURSE_CODE/$SEMESTER$YEAR ~/$COURSE_CODE/$SEMESTE
 cd ~/$COURSE_CODE/$SEMESTER$YEAR
 ```
 
-[2_copy_syllabus_template.sh](copy_syllabus_template.sh):
+[2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
 
 ```
 YEAR=<year>
@@ -54,7 +54,7 @@ cd ~/$COURSE_CODE/$SEMESTER$YEAR
 cp ~/faes-biof/syllabus/template.md ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx .
 ```
 
-[3_make_docx.sh](make_docx.sh):
+[3_make_docx.sh](3_make_docx.sh):
 
 ```
 YEAR=<year>
@@ -73,7 +73,7 @@ sed '
     ' template.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
 ```
 
-[4_push_syllabus.sh](push_syllabus.sh):
+[4_push_syllabus.sh](4_push_syllabus.sh):
 
 ```
 YEAR=<year>
