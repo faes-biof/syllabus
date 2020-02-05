@@ -47,6 +47,7 @@ If you are having trouble installing L<sup>A</sup>T<sub>E</sub>X, you can skip t
     - syllabus template,
     - FAES logo, and
     - reference.docx
+    - pdf.yml
 - [3_make_doc.sh](3_make_doc.sh) creates a docx version of your syllabus using [pandoc](https://pandoc.org/)
 - [4_make_htm.sh](4_make_htm.sh) creates an html version of your syllabus using [pandoc](https://pandoc.org/)
 - [5_make_pdf.sh](4_make_pdf.sh) creates a pdf version of your syllabus using [pandoc](https://pandoc.org/)
@@ -103,7 +104,7 @@ COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
 cd ~/$COURSE_CODE/$SEMESTER$YEAR
 cp ~/faes-biof/syllabus/template.md $SYLLABUS_NAME.md
-cp ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx .
+cp ~/faes-biof/syllabus/pdf.yml ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx .
 ```
 
 [3_make_doc.sh](3_make_doc.sh):
