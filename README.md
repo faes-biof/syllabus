@@ -32,18 +32,22 @@ Microsoft Word and pdf files can be shared with non-programmers.
     - [1_clone_course_repo.sh](1_clone_course_repo.sh),
     - [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh),
     - [3_make_docx.sh](3_make_docx.sh),
-    - [4_push_syllabus.sh](4_push_syllabus.sh),
-    - [5_symlink_readme.sh](5_symlink_readme.sh), and
-    - [6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh)
+    - [4_make_htm.sh](4_make_htm.sh),
+    - [5_make_pdf.sh](5_make_pdf.sh),
+    - [6_push_syllabus.sh](6_push_syllabus.sh),
+    - [7_push_logo_and_refdoc.sh](7_push_logo_and_refdoc.sh), and
+    - [8_symlink_readme.sh](8_symlink_readme.sh)
 - [1_clone_course_repo.sh](1_clone_course_repo.sh) clones your course repo (skip this step if it is already cloned)
 - [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh) copies the following files to your course repo:
     - syllabus template,
     - FAES logo, and
     - reference.docx
-- [3_make_docx.sh](3_make_docx.sh) creates a docx version of your syllabus markdown file using [pandoc](https://pandoc.org/)
-- [4_push_syllabus.sh](4_push_syllabus.sh) adds, commits, and pushes the markdown and docx versions of your syllabus to your course repo
-- [5_symlink_readme.sh](5_symlink_readme.sh) **overwrites your current README.md** by symlinking your syllabus markdown file to README.md
-- [6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh) pushes the FAES logo and reference docx to your course repo, e.g.
+- [3_make_doc.sh](3_make_doc.sh) creates a docx version of your syllabus using [pandoc](https://pandoc.org/)
+- [4_make_htm.sh](4_make_htm.sh) creates an html version of your syllabus using [pandoc](https://pandoc.org/)
+- [5_make_pdf.sh](4_make_pdf.sh) creates a pdf version of your syllabus using [pandoc](https://pandoc.org/)
+- [6_push_syllabus.sh](4_push_syllabus.sh) adds, commits, and pushes the markdown and docx versions of your syllabus to your course repo
+- [7_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh) pushes the FAES logo and reference docx to your course repo, e.g.
+- [8_symlink_readme.sh](5_symlink_readme.sh) **overwrites your current README.md** by symlinking your syllabus markdown file to README.md
 
 ### What's in the scripts?
 
@@ -97,7 +101,7 @@ cp ~/faes-biof/syllabus/template.md $SYLLABUS_NAME.md
 cp ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx .
 ```
 
-[3_make_docx.sh](3_make_docx.sh):
+[3_make_doc.sh](3_make_doc.sh):
 
 ```sh
 YEAR=<year>
@@ -116,7 +120,34 @@ sed '
     ' $SYLLABUS_NAME.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
 ```
 
-[4_push_syllabus.sh](4_push_syllabus.sh):
+[4_make_htm.sh](4_make_htm.sh):
+
+```sh
+YEAR=<year>
+SEMESTER=<semester>
+COURSE_CODE=<course_code>
+SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
+cd ~/$COURSE_CODE/$SEMESTER$YEAR
+sed '
+    s/align=">/style="text-align:/
+    ' $SYLLABUS_NAME.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
+```
+
+[5_make_pdf.sh](5_make_pdf.sh):
+
+```sh
+YEAR=<year>
+SEMESTER=<semester>
+COURSE_CODE=<course_code>
+SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
+cd ~/$COURSE_CODE/$SEMESTER$YEAR
+sed '
+    s/^<div align="center">/\\begin{center}/;
+    s/^<\/div>/\\end{center}/
+    ' $SYLLABUS_NAME.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
+```
+
+[6_push_syllabus.sh](6_push_syllabus.sh):
 
 ```sh
 YEAR=<year>
@@ -129,7 +160,15 @@ git commit -m "Add FAES syllabus template in md and docx format"
 git push
 ```
 
-[5_symlink_readme.sh](5_symlink_readme.sh):
+[7_push_logo_and_refdoc.sh](7_push_logo_and_refdoc.sh):
+
+```sh
+git add faes300.png reference.docx
+git commit -m "Add FAES logo and reference docx"
+git push
+```
+
+[8_symlink_readme.sh](8_symlink_readme.sh):
 
 ```sh
 YEAR=<year>
@@ -142,10 +181,3 @@ git commit -m "Replace current readme with syllabus"
 git push
 ```
 
-[6_push_logo_and_refdoc.sh](6_push_logo_and_refdoc.sh):
-
-```sh
-git add faes300.png reference.docx
-git commit -m "Add FAES logo and reference docx"
-git push
-```
