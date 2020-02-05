@@ -44,7 +44,7 @@ If you are having trouble installing L<sup>A</sup>T<sub>E</sub>X, you can skip t
     - [8_symlink_readme.sh](8_symlink_readme.sh)
 - [1_clone_course.sh](1_clone_course.sh) clones your course repo (skip this step if it is already cloned)
 - [2_copy_template.sh](2_copy_template.sh) copies the following files to your course repo:
-    - syllabus template,
+    - syllabus template (renamed to YEAR-SEMESTER-COURSE_CODE-syllabus.md),
     - FAES logo,
     - reference.docx, and
     - header.tex
@@ -118,8 +118,8 @@ cd ~/$COURSE_CODE/$SEMESTER$YEAR
 sed '
     s/^<div align="center">/::: {custom-style="center"}/;
     s/^<\/div>/:::/;
-    s/^<img src="/!\[\](/;
-    s/" width="200">$/){width="4cm"}/
+    s/^<img src="/![](/;
+    s/" width="200">/){width="4cm"}/
     s/^- /#### /;
     s/^  - /##### /;
     s/^    - /###### /;
@@ -135,7 +135,7 @@ COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
 cd ~/$COURSE_CODE/$SEMESTER$YEAR
 sed '
-    s/align=">/style="text-align:/
+    s/align="/style="text-align:/
     ' $SYLLABUS_NAME.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
 ```
 
@@ -149,7 +149,9 @@ SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
 cd ~/$COURSE_CODE/$SEMESTER$YEAR
 sed '
     s/^<div align="center">/\\begin{center}/;
-    s/^<\/div>/\\end{center}/
+    s/^<\/div>/\\end{center}/;
+    s/<img src="/\\includegraphics[width=4cm]{/;
+    s/" width="200">/}/
     ' $SYLLABUS_NAME.md | pandoc -o $SYLLABUS_NAME.docx --reference-doc=reference.docx
 ```
 
@@ -162,15 +164,15 @@ COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
 cd ~/$COURSE_CODE/$SEMESTER$YEAR
 git add $SYLLABUS_NAME.md $SYLLABUS_NAME.docx $SYLLABUS_NAME.html $SYLLABUS_NAME.pdf
-git commit -m "Add FAES syllabus template in md and docx format"
+git commit -m "Add FAES syllabus template in md, docx, html, and pdf format"
 git push
 ```
 
-[7_push_others.sh](7_push_logo_and_refdoc.sh):
+[7_push_others.sh](7_push_others.sh):
 
 ```sh
-git add faes300.png reference.docx header.html
-git commit -m "Add FAES logo and reference docx"
+git add faes300.png reference.docx header.tex
+git commit -m "Add FAES logo, reference docx, and header.tex"
 git push
 ```
 
@@ -183,7 +185,7 @@ COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
 ln -s $SYLLABUS_NAME.md README.md
 git add README.md
-git commit -m "Replace current readme with syllabus"
+git commit -m "Replace current readme with syllabus symlink"
 git push
 ```
 
