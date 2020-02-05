@@ -6,8 +6,8 @@ cd ~/$COURSE_CODE/$SEMESTER$YEAR
 sed '
     s/^<div align="center">/::: {custom-style="center"}/;
     s/^<\/div>/:::/;
-    s/^<img src="/!\[\](/;
-    s/" width="200">$/){width="4cm"}/
+    s/^<img src="/![](/;
+    s/" width="200">/){width="4cm"}/
     s/^- /#### /;
     s/^  - /##### /;
     s/^    - /###### /;

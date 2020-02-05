@@ -21,13 +21,16 @@ Microsoft Word and pdf files can be shared with non-programmers.
 - `cd ~/faes-biof/syllabus`
 2. Edit the 3 uppercase words (YEAR, SEMESTER, and COURSE_CODE) in [0_edit_scripts.sh](0_edit_scripts.sh), e.g.
 - `sed -i.bak 's/YEAR/2020/;s/SEMESTER/spring/;s/COURSE_CODE/biof309/' 0_edit_scripts.sh`
-3. Run the first 2 scripts with a for loop:
-- `for file in {0..1}*.sh; do bash $file; done`
+3. Run the first 3 scripts with a for loop:
+- `for file in {0..2}*.sh; do bash $file; done`
 4. Edit edit the syllabus template markdown file in your course repo using your favorite text editor, e.g.
 - `vim ~/biof309/spring2020/2020-spring-biof309.md`
-5. Run the next 3 scripts with a for loop:
-- `for file in {2..4}*.sh; do bash $file; done`
-6. Repeats steps 4-5 whenever you want to update the syllabus
+5. Run the next few scripts with a for loop:
+- `for file in {3..6}*.sh; do bash $file; done`
+Repeat steps 4-5 whenever you want to update the syllabus
+If you are having trouble installing L<sup>A</sup>T<sub>E</sub>X, you can skip the [5_make_pdf.sh](5_make_pdf.sh) script:
+- `for file in {3..5}*.sh 6*.sh; do bash $file; done`, or
+- `for file in {3..5}*.sh {6..8}*.sh; do bash $file; done`
 
 ### What do the scripts do?
 - [0_edit_scripts.sh](0_edit_scripts.sh) modifies the YEAR, SEMESTER, and COURSE_CODE variables in
