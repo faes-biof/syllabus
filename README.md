@@ -9,9 +9,11 @@ HTML files can be embedded inside of websites.
 Microsoft Word and pdf files can be shared with non-programmers.
 
 ### Requirements:
+- A course repo on [GitHub](https://github.com/) - For more on how to create a GitHub repo, [visit this webpage](https://help.github.com/en/github/getting-started-with-github/create-a-repo)
 - [git](https://git-scm.com/) - May already be installed, if running `git --help` gives an error, [install git](https://www.atlassian.com/git/tutorials/install-git)
 - [pandoc](https://pandoc.org/) - Probably not already installed, [install pandoc](https://pandoc.org/installing.html)
-- a course repo on [GitHub](https://github.com/) - For more on how to create a GitHub repo, visit [this webpage](https://help.github.com/en/github/getting-started-with-github/create-a-repo)
+
+- [L<sup>A</sup>T<sub>E</sub>X](https://www.latex-project.org/) - Needed to make a PDF version of the syllabus, probably not already installed, [install L<sup>A</sup>T<sub>E</sub>X](https://www.latex-project.org/get/#tex-distributions)
 
 ### Initial setup:
 1. Clone and cd into this repo:
