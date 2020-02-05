@@ -34,20 +34,20 @@ If you are having trouble installing L<sup>A</sup>T<sub>E</sub>X, you can skip t
 
 ### What do the scripts do?
 - [0_edit_scripts.sh](0_edit_scripts.sh) modifies the YEAR, SEMESTER, and COURSE_CODE variables in
-    - [1_clone_course_repo.sh](1_clone_course_repo.sh),
-    - [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh),
+    - [1_clone_course.sh](1_clone_course.sh),
+    - [2_copy_template.sh](2_copy_template.sh),
     - [3_make_docx.sh](3_make_docx.sh),
     - [4_make_htm.sh](4_make_htm.sh),
     - [5_make_pdf.sh](5_make_pdf.sh),
     - [6_push_syllabus.sh](6_push_syllabus.sh),
     - [7_push_logo_and_refdoc.sh](7_push_logo_and_refdoc.sh), and
     - [8_symlink_readme.sh](8_symlink_readme.sh)
-- [1_clone_course_repo.sh](1_clone_course_repo.sh) clones your course repo (skip this step if it is already cloned)
-- [2_copy_syllabus_template.sh](2_copy_syllabus_template.sh) copies the following files to your course repo:
+- [1_clone_course.sh](1_clone_course.sh) clones your course repo (skip this step if it is already cloned)
+- [2_copy_template.sh](2_copy_template.sh) copies the following files to your course repo:
     - syllabus template,
-    - FAES logo, and
-    - reference.docx
-    - pdf.yml
+    - FAES logo,
+    - reference.docx, and
+    - header.tex
 - [3_make_doc.sh](3_make_doc.sh) creates a docx version of your syllabus using [pandoc](https://pandoc.org/)
 - [4_make_htm.sh](4_make_htm.sh) creates an html version of your syllabus using [pandoc](https://pandoc.org/)
 - [5_make_pdf.sh](4_make_pdf.sh) creates a pdf version of your syllabus using [pandoc](https://pandoc.org/)
@@ -86,7 +86,7 @@ sed -i.bak '
     ' ~/faes-biof/syllabus/{1..6}*.sh
 ```
 
-[1_clone_course_repo.sh](1_clone_course_repo.sh):
+[1_clone_course.sh](1_clone_course.sh):
 
 ```sh
 YEAR=<year>
@@ -95,16 +95,16 @@ COURSE_CODE=<course_code>
 git clone https://github.com/$COURSE_CODE/$SEMESTER$YEAR ~/$COURSE_CODE/$SEMESTER$YEAR
 ```
 
-[2_copy_syllabus_template.sh](2_copy_syllabus_template.sh):
+[2_copy_template.sh](2_copy_template.sh):
 
 ```sh
 YEAR=<year>
 SEMESTER=<semester>
 COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
-cd ~/$COURSE_CODE/$SEMESTER$YEAR
-cp ~/faes-biof/syllabus/template.md $SYLLABUS_NAME.md
-cp ~/faes-biof/syllabus/pdf.yml ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx .
+cd ~/faes-biof/syllabus/
+cp template.md ~/$COURSE_CODE/$SEMESTER$YEAR/$SYLLABUS_NAME.md
+cp faes300.png reference.docx header.tex ~/$COURSE_CODE/$SEMESTER$YEAR/
 ```
 
 [3_make_doc.sh](3_make_doc.sh):
@@ -161,15 +161,15 @@ SEMESTER=<semester>
 COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
 cd ~/$COURSE_CODE/$SEMESTER$YEAR
-git add $SYLLABUS_NAME.md $SYLLABUS_NAME.docx
+git add $SYLLABUS_NAME.md $SYLLABUS_NAME.docx $SYLLABUS_NAME.html $SYLLABUS_NAME.pdf
 git commit -m "Add FAES syllabus template in md and docx format"
 git push
 ```
 
-[7_push_logo_and_refdoc.sh](7_push_logo_and_refdoc.sh):
+[7_push_others.sh](7_push_logo_and_refdoc.sh):
 
 ```sh
-git add faes300.png reference.docx
+git add faes300.png reference.docx header.html
 git commit -m "Add FAES logo and reference docx"
 git push
 ```

@@ -2,6 +2,6 @@ YEAR=<year>
 SEMESTER=<semester>
 COURSE_CODE=<course_code>
 SYLLABUS_NAME=$YEAR-$SEMESTER-$COURSE_CODE-syllabus
-cd ~/$COURSE_CODE/$SEMESTER$YEAR
-cp ~/faes-biof/syllabus/template.md $SYLLABUS_NAME.md
-cp ~/faes-biof/syllabus/pdf.yml ~/faes-biof/syllabus/faes300.png ~/faes-biof/syllabus/reference.docx .
+cd ~/faes-biof/syllabus/
+cp template.md ~/$COURSE_CODE/$SEMESTER$YEAR/$SYLLABUS_NAME.md
+cp faes300.png reference.docx header.tex ~/$COURSE_CODE/$SEMESTER$YEAR/
