@@ -1,3 +1,7 @@
+<div align="center">
+<h1>FAES Syllabus</h1>
+</div>
+
 ### Goal
 Enable FAES instructors to easily maintain a syllabus in multiple different formats:
 - markdown
@@ -14,21 +18,20 @@ Enable FAES instructors to easily maintain a syllabus in multiple different form
 Markdown is a popular and versatile markup language that provides a simple syntax in addition to all of the power of HTML (HyperText Markup Language).
 Markdown files can be converted into HTML, Microsoft Word, and pdf files using [pandoc](https://pandoc.org/).
 
-# Don't edit output files!
+### Don't edit output files!
 Round trip conversion (e.g. docx <-> md) with pandoc is possible but maintaining formatting can be a challenge.
 Microsoft Word does not work well with version control systems (e.g. [git](https://git-scm.com/)) or programmatic workflows.
 If you would like to programmatically access changes and comments in a Word doc, take a look at these projects:
-- [redoc](https://github.com/noamross/redoc#redoc---reversible-reproducible-documents).
-- [officer](https://github.com/davidgohel/officer#officer-r-package).
-- [officedown](https://github.com/davidgohel/officedown#usage).
-- [python-docx](https://python-docx.readthedocs.io/).
+- [redoc](https://github.com/noamross/redoc#redoc---reversible-reproducible-documents)
+- [officer](https://github.com/davidgohel/officer#officer-r-package)
+- [officedown](https://github.com/davidgohel/officedown#usage)
+- [python-docx](https://python-docx.readthedocs.io/)
 
 ### Requirements
-- A course repo on [GitHub](https://github.com/) - For more on how to create a GitHub repo, [visit this webpage](https://help.github.com/en/github/getting-started-with-github/create-a-repo)
-- [git](https://git-scm.com/) - May already be installed, if running `git --help` gives an error, [install git](https://www.atlassian.com/git/tutorials/install-git)
-- [pandoc](https://pandoc.org/) - Probably not already installed, [install pandoc](https://pandoc.org/installing.html)
-
-- [L<sup>A</sup>T<sub>E</sub>X](https://www.latex-project.org/) - Needed to make a PDF version of the syllabus, probably not already installed, [install L<sup>A</sup>T<sub>E</sub>X](https://www.latex-project.org/get/#tex-distributions)
+- A course repo on [GitHub](https://github.com/) - For more on how to create a GitHub repo, [visit this webpage](https://help.github.com/en/github/getting-started-with-github/create-a-repo).
+- [git](https://git-scm.com/) - May already be installed, if running `git --help` gives an error, [install git](https://www.atlassian.com/git/tutorials/install-git).
+- [pandoc](https://pandoc.org/) - Needed for all file conversions, probably not already installed, [install pandoc](https://pandoc.org/installing.html).
+- [L<sup>A</sup>T<sub>E</sub>X](https://www.latex-project.org/) - Needed to make a PDF version of the syllabus, probably not already installed, [install L<sup>A</sup>T<sub>E</sub>X](https://www.latex-project.org/get/#tex-distributions).
 
 ### Initial setup
 1. Clone and cd into this repo:
@@ -39,16 +42,21 @@ If you would like to programmatically access changes and comments in a Word doc,
 3. Run the first 3 scripts with a for loop:
 - `for file in {0..2}*.sh; do bash $file; done`
 4. Edit edit the syllabus template markdown file in your course repo using your favorite text editor, e.g.
-- `vim ~/biof309/spring2020/2020-spring-biof309.md`
+- `vim ~/biof309/spring2020/2020-spring-biof309-syllabus.md`
 5. Run the next 4 scripts with a for loop:
 - `for file in {3..6}*.sh; do bash $file; done`
-Repeat steps 4-5 whenever you want to update the syllabus
+
+Repeat steps 4-5 whenever you want to update the syllabus.
+
+#### Trouble with L<sup>A</sup>T<sub>E</sub>X?
 If you are having trouble installing L<sup>A</sup>T<sub>E</sub>X, you can skip the [5_make_pdf.sh](5_make_pdf.sh) script:
 - `for file in {3..5}*.sh 6*.sh; do bash $file; done`, or
 - `for file in {3..5}*.sh {6..8}*.sh; do bash $file; done`
-OPTIONAL: Use [7_push_others.sh](7_push_others.sh) to add the FAES logo file, L<sup>A</sup>T<sub>E</sub>X header, and reference.docx to your course repo.
-OPTIONAL: Use [8_symlink_readme.sh](8_symlink_readme.sh) to create a symbolic link (symlink) called README.md to your syllabus markdown file.
-WARNING: [8_symlink_readme.sh](8_symlink_readme.sh) will **overwrite your current README.md** if one exists.
+
+#### Optional steps
+- Use [7_push_others.sh](7_push_others.sh) to add the FAES logo file, L<sup>A</sup>T<sub>E</sub>X header, and reference.docx to your course repo.
+- Use [8_symlink_readme.sh](8_symlink_readme.sh) to create a symbolic link (symlink) called README.md to your syllabus markdown file.
+- **WARNING**: [8_symlink_readme.sh](8_symlink_readme.sh) will **overwrite your current README.md** if one exists.
 
 ### What do the scripts do?
 - [0_edit_scripts.sh](0_edit_scripts.sh) modifies the YEAR, SEMESTER, and COURSE_CODE variables in
